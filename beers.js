@@ -1,4 +1,4 @@
-const beers = {
+export const beers = {
   id: "beers",
   logo: "Best Beers",
   button: "details",
@@ -55,35 +55,3 @@ const beers = {
     },
   ],
 };
-
-const rootElement = document.querySelector("#root");
-rootElement.insertAdjacentHTML(
-  "beforeend",
-  `
-<header>
-<p>Best Beers</p>
-<span>
-  <span class="material-icons md-36">menu</span>
-</span>
-</header>
-<div class="cards-container"></div>`
-);
-
-const cardContainer = document.querySelector(".cards-container");
-
-beers.cards.map((beer, i) => {
-  cardContainer.insertAdjacentHTML(
-    "beforeend",
-    `
-    <div class="card">
-    <div class="number">${i + 1}</div>
-    <div class="title">${beer.title}</div>
-    <div class="sub">${beer.sub}</div>
-    <button class="button">details
-      <span class="material-icons">arrow_forward</span>
-    </button>
-    <div class="text">${beer.text}</div>
-  </div>
-  `
-  );
-});
