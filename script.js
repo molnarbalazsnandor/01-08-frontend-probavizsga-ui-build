@@ -80,7 +80,7 @@ beers.cards.map((beer, i) => {
     <div class="title">${beer.title}</div>
     <div class="sub">${beer.sub}</div>
     <button class="button">details
-      <span class="material-icons">arrow_forward</span>
+      <span class="material-icons md-36">arrow_forward</span>
     </button>
     <div class="text">${beer.text}</div>
   </div>
